@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/admin_dashboard_product_updated.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title>Admin</title>
+
+</head>
+<body>
+
+
+  <nav class="topnav">
+    <img src="img/laundry-logo.png"  class="d-inline-block align-top" alt="">
+    <ul>
+      <li>
+        <!-- DROPDOWN BUTTON -->
+        <a class="dd-btn" id="dropdownbtn" href="#"><i class="fa fa-bars" style="color: #000000;"></i></a>
+        <!-- DROPDOWN MENU -->
+        <ul class="dd-menu hide">
+          <li><a  href="#">Item One</a></li>
+          <li><a  href="#">Item One</a></li>
+          <li><a  href="#">Item One</a></li>
+          <li><a  href="#">Item One</a></li>
+          <li><a  href="#">Item One</a></li>
+          <li><a  href="#">Item One</a></li>
+          <li><a  href="#">Item One</a></li>
+          <li><a  href="#">Item One</a></li>
+        </ul>
+      </li>
+    </ul>
+      <div class="search-container" style="float:right;">
+      <form action="">
+        <input type="text" placeholder="Search.." name="search">
+          <button type="submit" style="float:right;" ><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </nav>
+
+
+<!-- Table -->
+<div class="container">
+
+  <div id="header">
+      <h3>Products</h3>
+  </div>
+  <!-- Side Bar -->
+  <div class="wrapper">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+          <ul class="list-unstyled components">
+             <li>
+                  <a href="#">Products</a>
+              </li>
+              <li>
+                  <a href="#">Upcharges</a>
+              </li>
+              <li>
+                  <a href="#">Sections</a>
+              </li>
+              <li>
+                  <a href="#">Inventory</a>
+              </li>
+              <li>
+                  <a href="#">Custom Product Items</a>
+              </li>
+          </ul>
+      </nav>
+  <div class="table-container">
+    <div class = "row">
+      <div class="col-sm"><h2>Products</h2></div>
+      <div class="col-sm"><button class="btn btn-info" id='addProduct' style="float: right;">Add Product</button></div>
+    </div>
+
+    <div class="row">
+      <div class='col-12'>
+        <button class="btn btn-info" id="laundry"> Laundry</button> 
+
+        <button class="btn btn-info" id="dryCleaning">Dry Cleaning</button> 
+
+        <button class="btn btn-info" id="pressed">Pressed/Ironed </button> 
+
+        <button class="btn btn-info" id="repair">Repairs</button> 
+
+        <button class="btn btn-info" id="alterations">Alterations</button> 
+      </div>
+    </div>
+
+
+<!-- Product Table -->
+        <div class="table">
+          <div class="row">
+            <div class="col-sm">Product</div>
+            <div class="col-sm">Price</div>
+            <div class="col-sm">Price Express</div>
+            <div class="col-sm">Pieces</div>
+            <div class="col-sm">Active</div>
+            <div class="col-sm">Online</div>
+            <div class="col-sm">Edit</div>
+            <div class="col-sm">Delete</div>
+          </div>
+       
+          <div class="row">
+            <div class="col-sm">Jacket</div>
+            <div class="col-sm">20</div>
+            <div class="col-sm">30</div>
+            <div class="col-sm">1</div>
+            <div class="col-sm"><i class="fa fa-check"></i></div>
+            <div class="col-sm"><i class="fa fa-check"></i></div>
+            <div class="col-sm"><a href="#"><i class="fa fa-edit"></i></a></div>
+            <div class="col-sm"><a href="#"><i class="fa fa-trash"></a></i></div>
+          </div>
+        </div>
+<!-- Product Table Ends -->
+  </div>
+ </div>
+</div>
+
+
+<!-- Modal Section -->
+    <div class="bg-modal">
+      <div class="modal-content">
+        <h2>Add Product</h2>
+        <div class="close">+</div>
+
+
+        <form class="form">
+          <div class="form-class">
+
+          <section class="product-section">
+          <!-- First Row -->
+          <div class="row">
+            <div class="col-sm">
+              <label>Product Name</label>
+              <div class="input"><input type="text" placeholder=""/></div>
+            </div>
+            <div class="col-sm">
+              <label>Section</label>
+              <div class="input"><input type="text" placeholder=""/></div>
+            </div>
+          </div>
+          <!-- Second Row -->
+          <div class="row">
+            <div class="col-sm">
+              <label>Button Image</label>
+              <div class="input"><input type="text" placeholder=""/></div>
+            </div>
+            <div class="col-sm">
+              <label>Overlay Text</label>
+              <div class="input"><input type="text" placeholder=""/></div>
+            </div>
+          </div>
+          <!-- Third Row -->
+
+          <div class="row">
+            <div class="col-sm">
+              <label>Product Type</label>
+              <div class="input"><input type="text" placeholder=""/></div>
+            </div>
+          </div>
+          </section>
+
+
+          <!-- Lower Section -->
+          <section class="price-section">
+          <!-- Forth Row -->
+          <div class="row">
+            <div class="col-sm">
+              <label>Price</label>
+              <div class="input"><input type="text" placeholder=""/></div>
+            </div>
+            <div class="col-sm">
+              <label>Express Price</label>
+              <div class="input"><input type="text" placeholder=""/></div>
+            </div>
+            <div class="col-sm">
+              <label>Cost Price</label>
+              <div class="input"><input type="text" placeholder=""/></div>
+            </div>
+            <div class="col-sm">
+              <label>Piece Per Product</label>
+              <div class="input"><input type="text" placeholder=""/></div>
+            </div>
+          </div>
+            <!-- 5th row -->
+          <div class="row">
+            <div class="col-sm">
+              <label>Extra Days</label>
+              <div class="input"><input type="text" placeholder=""/></div>
+            </div>
+            <div class="col-sm">
+              <label>Order</label>
+              <div class="input"><input type="text" placeholder=""/></div>
+            </div>
+            <div class="col-sm">
+              <label>Id</label>
+              <div class="input"><input type="text" placeholder=""/></div>
+            </div>
+          </div>
+
+         
+          </section>
+
+          </div>
+
+          <button type="btn btn-green">Add Product</button>
+        </form>
+      
+      </div>
+    </div>
+    <!-- Modal Section Ends -->
+
+
+
+	<!-- jQuery library -->
+	<script src="js/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="js/popper.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Scrollbar -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+<!-- ADD PRODUCT POP UP -->
+<script type="text/javascript">
+  
+  document.getElementById('addProduct').addEventListener('click',function(){
+
+    document.querySelector('.bg-modal').style.display='flex';
+
+  });
+
+  document.querySelector('.close').addEventListener('click',function(){
+
+    document.querySelector('.bg-modal').style.display='none'
+  });
+</script>
+
+
+
+<!-- DROPDOWN SCRIPT -->
+<script type="text/javascript">
+  var btn = document.getElementsByClassName('dd-btn');
+  var menu = document.getElementsByClassName('dd-menu');
+
+  var menuStatus = false;
+
+function reset(){
+  for(var a = 0; a < menu.length; a++){
+  menu[a].classList.add('hide');
+}
+}
+
+reset();
+
+
+for(let i = 0; i< btn.length; i++){
+  btn[i].addEventListener('click',function(){
+    menu[i].classList.toggle('hide')
+  })
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
