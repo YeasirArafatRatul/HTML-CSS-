@@ -1,6 +1,11 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -9,78 +14,80 @@
 
 	<title>Laundry-Login</title>
 </head>
+
 <body>
 
 
 	<!-- Image and text -->
 	<nav class="navbar navbar-light">
-  	<a class="navbar-brand" href="#">
-    <img src="img/laundry-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    Clean Master 
-  </a>
-</nav>
+		<a class="navbar-brand" href="#">
+			<img src="img/laundry-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+			Clean Master
+		</a>
+	</nav>
 
 
- <!---Login Form--->
-<div class="login-page">
-  <div class="form">
-  	<h1> Log in </h1>
-  	<p><span class="link">Don't Have An Account? <a href="#">Notify Admin</a></span></p>
- 
+	<!-- Login Form -->
 
-
-
-    <form class="login-form">
-    <label for="exampleInputEmail1">Email</label>
-    <div class="inputWithIcon">
-    	<input type="text" placeholder="Hello"/>
-    </div>
-      <label for="exampleInputPassword">Password</label>
-      <input type="password" placeholder=""/>
-      <button class = "input" type="button">Log in</button>
-   
-   
-      <p class="message"><a onclick="toggle()">Forgot Password?</a></p>
-    </form>
+	<div class="login-page">
+		<div class="form">
+			<h1> Log in </h1>
+			<p><span class="link">Don't Have An Account? <a href="#">Notify Admin</a></span></p>
 
 
 
 
-    <div id="panel" style="display: none;" >
+			<form class="login-form">
+				<label>Email</label>
+				<div class="inputWithIcon">
+					<input type="text" placeholder="Hello" />
+				</div>
+				<label>Password</label>
+				<input type="password" placeholder="" />
+				<button class="input" type="button">Log in</button>
 
-	   <form  class="login-form">
-	    <label for="exampleInputEmail1">Email</label>
-	    <div class="inputWithIcon">
-	    <input type="text" placeholder="Hello"/>
-	    <i class="far fa-envelope" aria-hidden="trun"></i>
-	    </div>
-	    <button class = "input" type="button">Reset Password</button>
-	    </form>
 
-    </div>
-   
-  </div>
-</div>
+				<p class="message"><a onclick="toggle()">Forgot Password?</a></p>
+			</form>
 
 
 
 
+			<div id="panel" style="display: none;">
 
-		<!-- jQuery library -->
+				<form class="login-form">
+					<label>Email</label>
+					<div class="inputWithIcon">
+						<input type="text" placeholder="Hello" />
+						<i class="far fa-envelope" aria-hidden="true"></i>
+					</div>
+					<button class="input" type="button">Reset Password</button>
+				</form>
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+	<!-- jQuery library -->
 	<script src="js/jquery.min.js"></script>
 
 	<!-- Popper JS -->
 	<script src="js/popper.min.js"></script>
-		<!-- Latest compiled JavaScript -->
+	<!-- Latest compiled JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
 
 
 
-	<script> 
-		function toggle(){
-			var x =document.getElementById('panel')
+	<script>
+		function toggle() {
+			var x = document.getElementById('panel')
 
-			if (x.style.display ==='none'){
+			if (x.style.display === 'none') {
 				// x.style.display = 'block';
 
 				$("#panel").slideDown('slow')
@@ -97,4 +104,3 @@
 
 
 </html>
-

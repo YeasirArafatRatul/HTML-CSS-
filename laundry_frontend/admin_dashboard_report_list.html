@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/admin_dashboard.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+  <title>Admin</title>
+
+</head>
+
+<body>
+
+
+  <nav class="topnav">
+    <img src="img/laundry-logo.png" class="d-inline-block align-top" alt="">
+    <ul class="mr-auto">
+      <li>
+        <!-- DROPDOWN BUTTON -->
+        <a class="dd-btn" id="dropdownbtn" href="#"><i class="fa fa-bars" style="color: #000000;"></i></a>
+        <!-- DROPDOWN MENU -->
+        <ul class="dd-menu hide">
+          <li><a href="#"><i class="fas fa-search"></i>Search</a></li>
+          <li><a href="invoice.html"><i class="fas fa-list"></i>Invoice</a></li>
+          <li><a href="#"><i class="fas fa-tshirt"></i>Product</a></li>
+          <li><a href="#"><i class="fas fa-user"></i>Users</a></li>
+          <li><a href="#"><i class="fas fa-user-cog"></i>Admin</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="search-container" style="float:right;">
+      <form action="action.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit" style="float:right;"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </nav>
+
+
+  <!-- Table -->
+  <div class="container">
+
+    <div id="header">
+      <h3>Reports</h3>
+    </div>
+    <!-- Side Bar -->
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <ul class="list-unstyled components">
+          <li>
+            <a class="daily-sales" href="#">Daily Cash</a>
+          </li>
+          <li>
+            <a class="daily-company-report" href="#">Daily Company Report</a>
+          </li>
+          <li>
+            <a class="monthly-company-report" href="#">Monthly Company Report</a>
+          </li>
+          <li>
+            <a class="monthly-report" href="#">Monthly Report</a>
+          </li>
+          <li>
+            <a class="stock-report" href="#">Stock Report</a>
+          </li>
+          <li>
+            <a class="store-report" href="#">Store Report</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="table-container">
+        <div class="row">
+          <div class="col-sm">
+            <h2>Report</h2>
+          </div>
+          <div class="col-sm"><button class="btn btn-info" id='addProduct' style="float: right;">PRINT</button></div>
+        </div>
+
+
+
+        <!-- Daily Cash Report Table -->
+        <table class="table" id="salesReport">
+
+          <thead>
+            <tr>
+              <th>Notes</th>
+              <th>Cashier</th>
+              <th>Amount</th>
+              <th>qty Count</th>
+              <th>Invoice Type</th>
+              <th>Invoice No</th>
+              <th>Barcode</th>
+              <th>Date and Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>jamal</td>
+              <td>50</td>
+              <td>3</td>
+              <td>type name</td>
+              <td>5495</td>
+              <td>2009-1-5495</td>
+              <td>27-1-2020</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Daily Cash Report Table Ends -->
+
+        <!-- Daily Company Report -->
+        <table class="table " id="dailyCompanyReport">
+
+          <thead>
+            <tr>
+              <th>Emp Name</th>
+              <th>Emp No</th>
+              <th>Total</th>
+              <th>VAT</th>
+              <th>Amount</th>
+              <th>Qty No</th>
+              <th>Date</th>
+              <th>Invoice No</th>
+              <th>Branch</th>
+              <th>Branch No</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Noyon</td>
+              <td>01</td>
+              <td>21.00</td>
+              <td>2.00</td>
+              <td>23.00</td>
+              <td>5</td>
+              <td>2009-1-5495</td>
+              <td>11254</td>
+              <td>Dhaka</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Daily Company Report Ends -->
+
+        <!-- Monthly Company Report -->
+        <table class="table" id="monthlyCompanyReport">
+
+          <thead>
+            <tr>
+              <th>Aesthetic</th>
+              <th>TAX</th>
+              <th>Aesthetic Before Tax</th>
+              <th>The Branch</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>31,977.70</td>
+              <td>1522.748</td>
+              <td>30,454.952</td>
+              <td>Dhaka</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Monthly Company Report Ends -->
+
+        <!-- Monthly Report -->
+        <table class="table" id="monthlyReport">
+
+          <thead>
+            <tr>
+              <th>Emp Name</th>
+              <th>Emp No</th>
+              <th>Total</th>
+              <th>VAT</th>
+              <th>Amount</th>
+              <th>Qty No</th>
+
+              <th>Sub Col</th>
+              <th>Sub Col</th>
+              <th>Sub Col</th>
+              <th>Sub Col</th>
+
+              <th>Invoice No</th>
+              <th>Branch</th>
+              <th>Branch No</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Noyon</td>
+              <td>01</td>
+              <td>21.00</td>
+              <td>2.00</td>
+              <td>23.00</td>
+              <td>5</td>
+              <td>0</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>11254</td>
+              <td>Dhaka</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Monthly Report Ends -->
+
+        <!-- Stock Report -->
+        <table class="table " id="stockReport">
+
+          <thead>
+            <tr>
+              <th>Notes</th>
+              <th>Total</th>
+              <th>VAT</th>
+              <th>Amount</th>
+              <th>Qty</th>
+              <th>Type</th>
+              <th>Date</th>
+              <th>Barcode</th>
+              <th>Invoice No</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>51</td>
+              <td>2.45</td>
+              <td>48.47</td>
+              <td>16</td>
+              <td>arabic</td>
+              <td>2020/01/12</td>
+              <td>2009-1-5495</td>
+              <td>15112</td>
+            </tr>
+          </tbody>
+     
+        </table>
+        <!-- Stock Report Ends -->
+
+        <!-- Store Report  -->
+        <table class="table " id="storeReport">
+
+          <thead>
+            <tr>
+              <th>Bill</th>
+              <th>Emp No</th>
+              <th>Price</th>
+              <th>VAT</th>
+              <th>Amount</th>
+              <th>Qty No</th>
+              <th>Date</th>
+              <th>Invoice No</th>
+              <th>The warehouse</th>
+              <th>Branch No</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3.00</td>
+              <td>0.00</td>
+              <td>3.00</td>
+              <td>1</td>
+              <td>arabic</td>
+              <td>01/26/2020</td>
+              <td>13734</td>
+              <td>arabic</td>
+              <td>arabic</td>
+              <td>12/17/2019</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Store Report Ends -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- jQuery library -->
+  <script src="js/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="js/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- Scrollbar -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+
+  <!-- DROPDOWN SCRIPT -->
+  <script>
+    var btn = document.getElementsByClassName('dd-btn');
+    var menu = document.getElementsByClassName('dd-menu');
+
+    var menuStatus = true;
+
+    function reset() {
+      for (var a = 0; a < menu.length; a++) {
+        menu[a].classList.add('hide');
+      }
+    }
+
+    reset();
+
+
+    for (let i = 0; i < btn.length; i++) {
+      btn[i].addEventListener('click', function () {
+        menu[i].classList.toggle('hide')
+      })
+    }
+
+  </script>
+
+
+  <!-- Table Changing Script -->
+  <script>
+
+    // daily cash
+
+    // daily company report
+
+    // monthly report
+
+    // monthly company report
+
+    // stock report
+
+    // store report
+
+  </script>
+  <!-- Table Script Ends -->
+
+</body>
+
+</html>

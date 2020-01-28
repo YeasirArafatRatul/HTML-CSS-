@@ -1,0 +1,53 @@
+/* body{
+	margin: 0;
+	padding:0;
+	font-size: 13px;
+	font-family: sans-serif;
+	background-color: rgb(253, 0, 0);
+} */
+
+
+.invoice-container p{
+  float: left;
+  margin-top: 8px;
+  font-size: 28px;
+  font-weight: bold;
+  padding-left: 3px;
+  padding-right: 5px;
+}
+
+.invoice-container{
+  width: 100%;
+  height: 100%;
+  float:left;
+  padding-left: 3rem;
+
+}
+.invoice-container .search-form {
+  float: left;
+  padding-left: 3rem;
+  
+}
+.invoice-container .search-container input[type=text] {
+  
+    margin-top: 8px;
+    font-size: 25px;
+    border: none;
+    padding-left: 3px;
+  }
+  
+.invoice-container .search-container button {
+
+    padding-bottom: 2px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    border:none;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .invoice-container .search-container button:hover {
+    background: rgb(255, 255, 255);
+  }

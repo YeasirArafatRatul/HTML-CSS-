@@ -1,0 +1,74 @@
+
+.invoice-header{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Calibri;
+    text-decoration-color: #000000;
+    padding-left: 2px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+
+  }
+#invoiceday {
+  
+    background-color: rgb(235, 235, 235);
+    border: 1px solid #fff;
+    border-radius: 5px;
+  
+}
+#invoicetype {
+  
+    background-color: rgb(235, 235, 235);
+    border: 1px solid #fff;
+    border-radius: 5px;
+  
+}
+
+.topnav .profile {
+    font-size: 1.4rem;
+    margin-right: 2rem;
+    margin-top: 5px;
+}
+
+/* For CONTAINER section*/
+
+#header{
+    padding-left: 2px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+
+
+.container .wrapper {
+    display: flex;
+    width: 150%;
+    padding-top:8px;
+}
+
+
+.table-container{
+    padding-left: 25px;
+    width: 1000px;
+    background-color: #F5F5F5;;
+}
+
+.container button {
+  background:#00A7FB;
+  border: 1px solid;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.container button:hover,.form button:active,.form button:focus {
+  background: transparent;
+  /*color: #00A7FB;*/
+}
+
+.container .row{
+    padding: 2px 2px;
+}
+
+
+
+

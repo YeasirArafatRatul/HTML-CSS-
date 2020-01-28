@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/admin_dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/invoice.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+	<title>Invoice</title>
+
+</head>
+<body>
+
+
+  <nav class="topnav">
+    <img src="img/laundry-logo.png"  class="d-inline-block align-top" alt="">
+    <ul>
+      <li>
+        <!-- DROPDOWN BUTTON -->
+        <a class="dd-btn" id="dropdownbtn" href="#"><i class="fa fa-bars" style="color: #000000;"></i></a>
+        <!-- DROPDOWN MENU -->
+        <ul class="dd-menu hide">
+          <li><a  href="#"><i class="fas fa-search"></i>Search</a></li>
+          <li><a  href="#"><i class="fas fa-list"></i>Invoice</a></li> 
+          <li><a  href="#"><i class="fas fa-tshirt"></i>Product</a></li>
+          <li><a  href="#"><i class="fas fa-user"></i>Users</a></li>
+          <li><a  href="#"><i class="fas fa-user-cog"></i>Admin</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+<div class="invoice-container">
+<p>Invoice</p>
+  <div class="search-container">
+    <form class = "search-form" action="action.php">
+      <input type="text" placeholder="Search.." name="search">
+        <button type="submit" style="float:right;" ><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+
+</div>
+
+<!-- DROPDOWN SCRIPT -->
+<script>
+    var btn = document.getElementsByClassName('dd-btn');
+    var menu = document.getElementsByClassName('dd-menu');
+  
+    var menuStatus = false;
+  
+  function reset(){
+    for(var a = 0; a < menu.length; a++){
+    menu[a].classList.add('hide');
+  }
+  }
+  
+  reset();
+  
+  
+  for(let i = 0; i< btn.length; i++){
+    btn[i].addEventListener('click',function(){
+      menu[i].classList.toggle('hide')
+    })
+  }
+  
+  </script>
+  </body>
+  </html>

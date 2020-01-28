@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/admin_dashboard.css">
+  <link rel="stylesheet" type="text/css" href="css/factory.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+  <title>Profile</title>
+
+</head>
+
+<body>
+
+
+  <nav class="topnav">
+    <img src="img/laundry-logo.png" class="d-inline-block align-top" alt="">
+    <ul class='mr-auto'>
+      <li>
+        <!-- DROPDOWN BUTTON -->
+        <a class="dd-btn" id="dropdownbtn" href="#"><i class="fa fa-bars" style="color: #000000;"></i></a>
+        <!-- DROPDOWN MENU -->
+        <ul class="dd-menu hide">
+          <li><a href="#"><i class="fas fa-search"></i>Search</a></li>
+          <li><a href="invoice.html"><i class="fas fa-list"></i>Invoice</a></li>
+          <li><a href="#"><i class="fas fa-tshirt"></i>Product</a></li>
+          <li><a href="#"><i class="fas fa-user"></i>Users</a></li>
+          <li><a href="#"><i class="fas fa-user-cog"></i>Admin</a></li>
+        </ul>
+      </li>
+    </ul>
+
+
+    <div class="search-container" style="float:right;">
+      <form action="action.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit" style="float:right;"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+
+
+  </nav>
+
+  <br>
+
+  <div class="container emp-profile">
+    <form method="post">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="profile-img">
+            <img src="img/laundry-logo.png" alt="Not Uploaded Yet" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="profile-head">
+            <p>
+              Jamal
+            </p>
+            <h6>
+              Branch Manager
+            </h6>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                  aria-selected="true">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#editProfile" role="tab"
+                  aria-controls="editProfile" aria-selected="false">Edit Profile</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-8">
+            <div class="tab-content profile-tab" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>User Id</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>1346353</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Name</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>jamal</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Email</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>jamal@gmail.com</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Phone</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>123 456 7890</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="editProfile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>User Id</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>1346353</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Name</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="name" id="name">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Native Name</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="native-name" id="native-name">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Email</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" name="email" id="email">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Mobile No</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" name="mobile-no" id="mobile-no">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Voter Id</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" name="voter-id" id="voter-id">
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Change Photo</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input id="file" type="file" name="file" />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                  </div>
+
+                  <div class="col-md-6">
+                    <button id="btn" type="submit" 
+                    style="width: 7rem; float: left; height: 2.5rem; font-size:15px; font-weight: 600;
+                    background-color: #00c6ff; border: 1px solid white; 
+                    border-radius: 4px;color: #fff;"> Save </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- jQuery library -->
+  <script src="js/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="js/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- Scrollbar -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+  <!-- DROPDOWN SCRIPT -->
+  <script>
+    var btn = document.getElementsByClassName('dd-btn');
+    var menu = document.getElementsByClassName('dd-menu');
+
+    var menuStatus = false;
+
+    function reset() {
+      for (var a = 0; a < menu.length; a++) {
+        menu[a].classList.add('hide');
+      }
+    }
+
+    reset();
+
+
+    for (let i = 0; i < btn.length; i++) {
+      btn[i].addEventListener('click', function () {
+        menu[i].classList.toggle('hide')
+      })
+    }
+
+  </script>
+
+</body>
+
+</html>

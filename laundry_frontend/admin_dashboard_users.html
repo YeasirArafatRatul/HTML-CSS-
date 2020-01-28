@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/admin_users.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+  <title>Admin</title>
+
+</head>
+
+<body>
+
+
+  <nav class="topnav">
+    <img src="img/laundry-logo.png" class="d-inline-block align-top" alt="">
+    <ul class="mr-auto">
+      <li>
+        <!-- DROPDOWN BUTTON -->
+        <a class="dd-btn" id="dropdownbtn" href="#"><i class="fa fa-bars" style="color: #000000;"></i></a>
+        <!-- DROPDOWN MENU -->
+        <ul class="dd-menu hide">
+          <li><a href="#"><i class="fas fa-search"></i>Search</a></li>
+          <li><a href="invoice.html"><i class="fas fa-list"></i>Invoice</a></li>
+          <li><a href="#"><i class="fas fa-tshirt"></i>Product</a></li>
+          <li><a href="#"><i class="fas fa-user"></i>Users</a></li>
+          <li><a href="#"><i class="fas fa-user-cog"></i>Admin</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="search-container" style="float:right;">
+      <form action="action.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit" style="float:right;"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </nav>
+
+
+  <!-- Table -->
+  <div class="container">
+
+    <div class="header">
+      <span>Manage User Accounts</span>
+      <select name="usermanage" id="userManage">
+        <option value="report" >Reports</option>
+        <option value="deletions">Deletions</option>
+        <option value="login">View Logins</option>
+      </select>
+    </div>
+
+    <!-- Side Bar -->
+    <div class="wrapper">
+      <div class="table-container">
+        <div class="row">
+          <div class="col-sm">
+            <h2>Users</h2>
+          </div>
+          <div class="col-sm"><button class="btn btn-info" id='addProduct' style="float: right;">Add User</button>
+          </div>
+        </div>
+
+
+
+
+        <!-- User Table Starts -->
+        <table class="table">
+          <thead>
+            <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Edit Orders</th>
+            <th>Discount Orders</th>
+            <th>Credits</th>
+            <th>Online</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <td>User1</td>
+            <td>user1@gmail.com</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+            <td>50</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><a href="#"><i class="fa fa-edit"></i></a></td>
+            <td><a href="#"><i class="fa fa-trash"></i></a></td>
+          </tr>
+          </tbody>
+        </table>
+        <!-- User Table Ends -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Section -->
+  <div class="bg-modal">
+    <div class="modal-content">
+      <h2>Add Users</h2>
+      <div class="close">+</div>
+
+
+      <form class="form">
+        <div class="form-class">
+
+          <div class="user-section">
+            <!-- First Row -->
+            <div class="row">
+              <div class="col-sm">
+                <label>Name</label>
+                <div class="input"><input type="text" placeholder="" /></div>
+              </div>
+              <div class="col-sm">
+                <label>Email</label>
+                <div class="input"><input type="email" placeholder="" /></div>
+              </div>
+            </div>
+            <!-- Second Row -->
+            <div class="row">
+              <div class="col-sm">
+                <label>Phone</label>
+                <div class="input"><input type="number" placeholder="" /></div>
+              </div>
+              <div class="col-sm">
+                <label>City</label>
+                <div>
+                  <select name="usermanage" id="usercity">
+                    <option value="bmw" selected>Dhaka</option>
+                    <option value="mrcds">Ctg</option>
+                    <option value="mrcds">Cumilla</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Third Row -->
+            <div class="row">
+         
+              <div class="col-sm">
+                <label>Roll</label>
+                <div>
+                  <select name="usermanage" id="userroll">
+                    <option value="bmw" selected>Roll-1</option>
+                    <option value="mrcds">Roll-2</option>
+                    <option value="mrcds">Roll-3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm">
+                <label>Branch</label>
+                <div>
+                  <select name="usermanage" id="user">
+                    <option value="bmw" selected>Dhanmondi</option>
+                    <option value="mrcds">Khilgaon</option>
+                    <option value="mrcds">Gulshan</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+              <div class="row">
+                <div class="col-sm">
+                  <label>Password</label>
+                  <div class="input"><input type="password" placeholder="" /></div>
+                </div>
+                <div class="col-sm">
+                  <label>Confirm Password</label>
+                  <div class="input"><input type="password" placeholder="" /></div>
+                </div>
+              </div>
+              
+          </div>
+
+        </div>
+        <button class="btn btn-green">Create User</button>
+      </form>
+
+    </div>
+  </div>
+  <!-- Modal Section Ends -->
+
+
+
+  <!-- jQuery library -->
+  <script src="js/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="js/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- Scrollbar -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+  <!-- ADD PRODUCT POP UP -->
+  <script>
+
+    document.getElementById('addProduct').addEventListener('click', function () {
+
+      document.querySelector('.bg-modal').style.display = 'flex';
+
+    });
+
+    document.querySelector('.close').addEventListener('click', function () {
+
+      document.querySelector('.bg-modal').style.display = 'none'
+    });
+  </script>
+
+
+
+  <!-- DROPDOWN SCRIPT -->
+  <script>
+    var btn = document.getElementsByClassName('dd-btn');
+    var menu = document.getElementsByClassName('dd-menu');
+
+    var menuStatus = false;
+
+    function reset() {
+      for (var a = 0; a < menu.length; a++) {
+        menu[a].classList.add('hide');
+      }
+    }
+
+    reset();
+
+
+    for (let i = 0; i < btn.length; i++) {
+      btn[i].addEventListener('click', function () {
+        menu[i].classList.toggle('hide')
+      })
+    }
+
+  </script>
+
+</body>
+
+</html>

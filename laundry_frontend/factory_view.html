@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/admin_dashboard.css">
+  <link rel="stylesheet" type="text/css" href="css/factory.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+  <title>Factory View</title>
+
+</head>
+
+<body>
+
+
+  <nav class="topnav">
+    <img src="img/laundry-logo.png" class="d-inline-block align-top" alt="">
+    <ul class='mr-auto'>
+      <li>
+        <!-- DROPDOWN BUTTON -->
+        <a class="dd-btn" id="dropdownbtn" href="#"><i class="fa fa-bars" style="color: #000000;"></i></a>
+        <!-- DROPDOWN MENU -->
+        <ul class="dd-menu hide">
+          <li><a href="#"><i class="fas fa-search"></i>Search</a></li>
+          <li><a href="invoice.html"><i class="fas fa-list"></i>Invoice</a></li>
+          <li><a href="#"><i class="fas fa-tshirt"></i>Product</a></li>
+          <li><a href="#"><i class="fas fa-user"></i>Users</a></li>
+          <li><a href="#"><i class="fas fa-user-cog"></i>Admin</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="profile">
+      <li><button class="btn">Profile</button></li>
+    </ul>
+
+    <div class="search-container" style="float:right;">
+      <form action="action.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit" style="float:right;"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+
+
+  </nav>
+
+
+  <div class="container">
+    <div class="invoice-header">
+      <span>Invoices</span>
+      <select name="type-time" id="invoiceday">
+        <option value="today">Today</option>
+        <option value="this-week">This Week</option>
+        <option value="login">This Month</option>
+      </select>
+      <select name="type-wash" id="invoicetype">
+        <option value="laundry">Laundry</option>
+        <option value="dry-wash">Dry Wash</option>
+        <option value="repair">Repair</option>
+      </select>
+    </div>
+
+    <div class="wrapper">
+
+      <div class="table-container">
+        <div class="row">
+          <div class="col-sm">
+            <h2>Invoices</h2>
+            <!-- </div>
+          <div class="col-sm"><button class="btn btn-info" id='addProduct' style="float: right;">Add Product</button>
+          </div> -->
+          </div>
+
+
+
+          <!-- Invoice Table -->
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Invoice No</th>
+                <th>Order Date</th>
+                <th>Delivery Date</th>
+                <th>Pieces</th>
+                <th>Active</th>
+                <th>Online</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Jacket</td>
+                <td>20</td>
+                <td>30</td>
+                <td>1</td>
+                <td><i class="fa fa-check" id="editPrice"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><a href="#"><i class="fa fa-edit"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Invoice Table Ends -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- jQuery library -->
+  <script src="js/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="js/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- Scrollbar -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+  <!-- ADD PRODUCT POP UP -->
+  <script>
+
+    document.getElementById('editPrice').addEventListener('click', function () {
+
+      document.querySelector('.bg-modal').style.display = 'flex';
+
+    });
+
+    document.querySelector('.close').addEventListener('click', function () {
+
+      document.querySelector('.bg-modal').style.display = 'none'
+    });
+  </script>
+
+
+
+  <!-- DROPDOWN SCRIPT -->
+  <script>
+    var btn = document.getElementsByClassName('dd-btn');
+    var menu = document.getElementsByClassName('dd-menu');
+
+    var menuStatus = false;
+
+    function reset() {
+      for (var a = 0; a < menu.length; a++) {
+        menu[a].classList.add('hide');
+      }
+    }
+
+    reset();
+
+
+    for (let i = 0; i < btn.length; i++) {
+      btn[i].addEventListener('click', function () {
+        menu[i].classList.toggle('hide')
+      })
+    }
+
+  </script>
+
+</body>
+
+</html>

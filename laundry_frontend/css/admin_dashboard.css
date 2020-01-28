@@ -64,12 +64,20 @@ body{
 }
 
 .dd-menu li a {
-	display: block;
-	padding: 10px 15px;
-	text-decoration: none;
-	color: #222;
+  display: block;
+  padding: 12px 12px;
+  color: #222;
+  margin-left: 0rem;
+  font-size: 15px;
+  font-family: sans-serif;
 }
-
+.dd-menu li a i{
+	padding-left: 5px;
+	text-decoration: none;
+  color: rgb(30, 191, 255);
+  font-size: 20px;
+  position: relative;
+}
 
 .dd-menu li:last-child a{
 	border-bottom: 0px;
@@ -120,11 +128,11 @@ body{
 }
 
 .topnav .search-container button {
-  padding: 2px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
+  padding: 0.2em 0.8em;
+  margin-top: .5rem;
+  margin-right: 1rem;
   background: #ddd;
-  font-size: 17px;
+  font-size: 1rem;
   border: none;
   cursor: pointer;
   position: relative;
@@ -142,29 +150,39 @@ body{
     float: none;
     display: block;
     text-align: left;
-    width: 100%;
+    width: 50%;
+    height: 50%;
     margin: 0;
     padding: 14px;
   }
   .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
+  .topnav .search-container button {
+    font-size: 1rem;
+    padding-right:1em;
+    cursor: pointer;
+
+  
+  }
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
 }
+
+
 
 
 /* For CONTAINER section*/
-.container{
-    position: block;
-    float:center;
-    
-
-}
 
 #header{
     padding-left: 2px;
     padding-top: 10px;
     padding-bottom: 5px;
 }
+
+
 
 .container .wrapper {
     display: flex;
@@ -259,6 +277,7 @@ body{
   padding: 5px;
 }
 .form button{
+    font-size: .9rem;
     height: 40px;
     width: 100px;
     background-color: green;
@@ -266,6 +285,7 @@ body{
     border: 1px solid #fff;
     border-radius: 8px;
     float: right;
+    margin-right: 20px;
 }
 
 section {
@@ -274,7 +294,21 @@ section {
   align-content: center;
 }
 
+.product-section label{
+  font-weight: lighter;
+  font-family: Calibri;
+
+}
 .product-section input{
+  padding-left: 10px;
+  height: 40px;
+  width: 14rem;
+  border: 1px solid #fff;
+  border-color: white;
+  background-color: #E8E8E8;
+  border-radius: 8px;
+}
+.product-section select{
   padding-left: 10px;
   height: 40px;
   border: 1px solid #fff;
@@ -290,4 +324,5 @@ section {
   background-color: #E8E8E8;
   border-radius: 8px;
 }
+
 
